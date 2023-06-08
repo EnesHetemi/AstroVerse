@@ -208,10 +208,6 @@ footer{
     padding: 7px;
     cursor: pointer;
 }
-.col form button .icon_right{
-    font-size: 16px;
-    color: #ccc;
-}
 
 hr{
     width: 90%;
@@ -242,6 +238,7 @@ footer .copyright{
     left: 10px;
     animation: moveline 2s linear infinite;
 }
+
 @keyframes moveline{
     0%{
         left:-20px;

@@ -7,6 +7,7 @@
 	<title>AstroVerse</title>
 	<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/icon.css">
     <script
     src="https://kit.fontawesome.com/64d58efce2.js"
@@ -46,9 +47,82 @@
 		</div>
 	</header>
 
-    test test
+    <div class="container">
+        <span class="big-circle"></span>
+        <div class="form">
+          <div class="contact-info">
+            <h3 class="title">Na Kontaktoni</h3>
+            <p class="text">
+                Astroverse është një website i dedikuar astronomisë dhe hapësirës. Ky platformë ofron një përmbajtje të pasur dhe të përditësuar për të gjithë dashamirët e shkencës së hapësirës.
+            </p>
+  
+            <div class="info">
+              <div class="information">
+                <i class="fas fa-address-card"></i>
+                <p class="pl">Adem Jashari, 
+                       Prishtinë, Kosovë</p>
+              </div>
+              <div class="information">
+                <i class="fas fa-envelope"></i>
+                <p class="pl">astroverse@gmail.com</p>
+              </div>
+              <div class="information">
+                <i class="fas fa-phone"></i>
+                <p class="pl">+38344612867</p>
+              </div>
+            </div>
+  
+            <div class="social-media">
+              <p>Na ndjekni ne :</p>
+              <div class="social-icons">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+  
+            <form action="javascript:void(0)" autocomplete="off">
+              <h3 class="title">Contact us</h3>
+              <div class="input-container">
+                <input type="text" name="name" class="input name" placeholder="Emri Juaj" />
+                <span>Username</span>
+              </div>
+              <div class="input-container">
+                <input type="text" name="lname" class="input lname" placeholder="Mbiemri Juaj"/>
+                <span>Last Name</span>
+              </div>
+              <div class="input-container">
+                <input type="email" name="email" class="input email" placeholder="Email-i Juaj"/>
+                <span>Email</span>
+              </div>
+              <div class="input-container textarea">
+                <textarea name="subject" class="input subject" placeholder="Mesazhi Juaj"></textarea>
+                <span>Message</span>
+              </div>
+              <input type="submit" value="Send" class="btn disabled" />
 
-    <footer>
+              <span class="error-msg" style="color: aliceblue; margin-top: 20px;"></span>
+              <div name="successMsg" class="successMsg" style="display: none; color: aliceblue; margin-top: 20px;">Mesazhi eshte derguar me sukses!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <footer>
         <div class="row">
             <div class="col">
                 
@@ -102,8 +176,8 @@
         <hr>
         <p class="copyright">AstroVerse Ⓒ 2023 - Te Gjitha Te Drejtat e Rezervuar</p>
      </footer>
-    
 
-	<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
