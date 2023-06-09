@@ -278,4 +278,11 @@ footer .copyright{
     height: 100%;
     object-fit: cover; /* Maintain aspect ratio and cover the entire container */
   }
+
+  .logo{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    justify-content: start;
+  }
   
