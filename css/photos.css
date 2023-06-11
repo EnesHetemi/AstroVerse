@@ -1,29 +1,45 @@
-  /* Photo html page start */
-  .madhesite{
+
+  .madhesite {
     width: 400px;
     height: 400px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-  
   }
-  .teksti_photos{
+  
+  .teksti_photos {
     text-align: center;
     color: white;
     margin-top: 15px;
-    animation: fade-in-up 1s ease-out;
+    opacity: 0;
+    animation: fade-in-up 1s ease-out forwards; /* Added animation-fill-mode */
   }
-  .foto{
+  
+  .foto {
     width: 390px;
     height: 300px;
     object-fit: cover;
     border-radius: 5px;
+    opacity: 0;
+    animation: fade-in-up 1s ease-out forwards; /* Added animation-fill-mode */
   }
+  
   .active {
     opacity: 1;
-
   }
+  
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
   .slider-container {
     display: flex;
     flex-direction: row;
@@ -32,4 +48,28 @@
     width: 90%;
     height: 300px;
     justify-content: space-around;
+  }
+  
+
+  .slider-container-2 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .slider-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+/* .carousel-inner{
+    height: 500px;
+
+} */
+.carousel-item img {
+    height: 500px;
+    width: 60%;
+    object-fit: cover;
+    object-position: center;
+    margin:auto;
   }
