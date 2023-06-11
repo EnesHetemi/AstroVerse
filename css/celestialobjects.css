@@ -1,0 +1,16 @@
+.nav_tabs{
+    display: flex; flex-direction: row;   border-bottom: none !important; justify-content: center; margin-top: 30px;
+}
+.nav_tabs .nav-link {
+    color: white;
+  }
+  .nav_tabs .nav-link.active {
+    color: initial;
+  }
+  .nav_tabs .nav-link:hover {
+    border: none;
+    color: white;
+  }
+  .nav-link{
+    margin-right: 15px;
+  }
