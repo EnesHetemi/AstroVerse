@@ -5,6 +5,7 @@
 	font-family: sans-serif;
 }
 
+
 body {
     position: relative;
   }
@@ -299,3 +300,5 @@ footer .copyright{
     width: 40%;
     justify-content: start;
   }
+
+  
