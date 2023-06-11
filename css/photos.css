@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    transition: transform 0.3s ease;
   }
   
   .teksti_photos {
@@ -26,7 +27,20 @@
     border-radius: 5px;
     opacity: 0;
     animation: fade-in-up 1s ease-out forwards; /* Added animation-fill-mode */
+
   }
+
+  
+  .madhesite:hover {
+ /* Replace 'white' with your desired border color */
+    transform: scale(1.1); /* Adjust the scaling factor as needed for zoom in */
+    z-index: 1; /* Ensure the hovered image is on top */
+  }
+  .madhesite img:hover{
+    border: 2px solid white; 
+  }
+  
+
   
   .active {
     opacity: 1;
