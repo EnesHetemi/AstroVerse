@@ -6,8 +6,22 @@
 }
 
 body {
-	background-color: #eee;
-}
+    position: relative;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to top, rgba(0, 9, 60, 0.9), rgba(45, 11, 0, 0.9));
+  }
+  
+  /* Your other CSS styles */
+  
 
 nav {
 	position: relative;
@@ -285,4 +299,3 @@ footer .copyright{
     width: 40%;
     justify-content: start;
   }
-  

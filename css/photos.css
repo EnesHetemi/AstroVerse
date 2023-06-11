@@ -1,0 +1,35 @@
+  /* Photo html page start */
+  .madhesite{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  
+  }
+  .teksti_photos{
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+    animation: fade-in-up 1s ease-out;
+  }
+  .foto{
+    width: 390px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .active {
+    opacity: 1;
+
+  }
+  .slider-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    margin: auto;
+    width: 90%;
+    height: 300px;
+    justify-content: space-around;
+  }

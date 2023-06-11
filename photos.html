@@ -9,10 +9,26 @@
 	<link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/icon.css">
   <link rel="stylesheet" href="css/load.css">
+  <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="css/photos.css">
+
     <script
     src="https://kit.fontawesome.com/64d58efce2.js"
     crossorigin="anonymous"
   ></script>
+  <style>
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  </style>
 </head>
 <body>
 
@@ -33,9 +49,9 @@
 				<a href="photos.html">Fotografite</a>
 				<a href="news.html">Lajmet</a>
 				<a href="#">Objektet Qiellore</a>
-        <a href="#">Ngjarjet</a>
-        <a href="#">Grafikat</a>
-        <a href="contact.html">Kontakt</a>
+                <a href="#">Ngjarjet</a>
+                <a href="#">Grafikat</a>
+                <a href="contact.html">Kontakt</a>
 			</div>
 
 			<button class="hamburger">
@@ -45,22 +61,64 @@
 
 		<div class="mobile-menu">
 			<a href="index.html">Ballina</a>
-			<a href="photos.html">Fotografite</a>
+			<a href="#">Fotografit</a>
 			<a href="news.html">Lajmet</a>
 			<a href="#">Objektet Qiellore</a>
-      <a href="#">Ngjarjet</a>
-      <a href="#">Grafikat</a>
-      <a href="contact.html">Kontakt</a>
+            <a href="#">Ngjarjet</a>
+            <a href="#">Grafikat</a>
+            <a href="contact.html">Kontakt</a>
 		</div>
 	</header>
+    
 
-  <div class="video-container">
-    <video controls muted autoplay>
-      <source src="./videos/univers.mp4"><source>
 
-    </video>
-  </div>
+    
+   
+        <div style="display: flex; flex-direction: row; justify-content: space-around; width: 100%; height: 100%; justify-content: space-evenly; margin-top: 10px; margin-bottom: 10px;  flex-wrap: wrap;">
+          <div class="slider1 madhesite">
+            <img src="images/orion.jpg" alt="Astronomy Photo 1" class="active foto">
+            <div class="teksti_photos">
+                <h4>Russia Ukraine: Massive consequences <br>if Moscow invades, G7 says</h4>
+               </div>
 
+          </div>
+    
+          <div class="slider2 madhesite">
+            <img src="images/bloodymoon.jpeg" alt="Astronomy Photo 3" class="active foto">
+            <div class="teksti_photos">
+                <h4>Russia Ukraine: Massive consequences <br>if Moscow invades, G7 says</h4>
+               </div>
+          </div>
+          <div class="slider3 madhesite">
+            <img src="images/bloodymoon.jpeg" alt="Astronomy Photo 3" class="active foto">
+            <div class="teksti_photos">
+                <h4>Russia Ukraine: Massive consequences <br>if Moscow invades, G7 says</h4>
+               </div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: space-around; width: 100%; height: 100%; justify-content: space-evenly; margin-top: 50px;">
+        <div class="slider3 madhesite">
+          <img src="images/bloodymoon.jpeg" alt="Astronomy Photo 3" class="active foto">
+          <div class="teksti_photos">
+            <h4>Russia Ukraine: Massive consequences <br>if Moscow invades, G7 says</h4>
+           </div>
+        </div>
+        <div class="slider1 madhesite">
+          <img src="images/orion.jpg"  alt="Astronomy Photo 1" class="active foto">
+          <div class="teksti_photos">
+            <h4>Russia Ukraine: Massive consequences <br>if Moscow invades, G7 says</h4>
+           </div>
+        </div>
+        <div class="slider1 madhesite">
+          <img src="images/orion.jpg"  alt="Astronomy Photo 1" class="active foto">
+          <div class="teksti_photos">
+            <h4>Russia Ukraine: Massive consequences <br>if Moscow invades, G7 says</h4>
+           </div>
+        </div>
+      </div>
+
+      
+      
 
     <footer >
         <div class="row">
@@ -116,8 +174,14 @@
         <hr>
         <p class="copyright">AstroVerse Ⓒ 2023 - Te Gjitha Te Drejtat e Rezervuar</p>
      </footer>
-    
-  <script src="js/load.js"></script>
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  
+
+    <script src="js/card.js"></script>
+    <script src="js/load.js"></script>
 	<script src="js/script.js"></script>
+	<!-- <script src="js/photos.js"></script>
+	<script src="js/photos2.js"></script> -->
+ 
 </body>
 </html>
