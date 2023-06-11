@@ -1,0 +1,123 @@
+.main-content {
+    padding: 40px;
+  }
+  
+  .news-article {
+    max-width: 680px;
+    margin: 0 auto;
+    background-color: crimson;
+    border-radius: 4px;
+    padding: 20px;
+    opacity: 0;
+    animation: fade-in 4s ease-out forwards;
+  }
+  
+  .article-title {
+    color: white;
+    font-size: 28px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .article-meta {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .article-content {
+    margin-top: 20px;
+    color: white;
+    line-height: 1.6;
+  }
+  
+  .media-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #loading-spinner {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #021b2c;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  #news-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  #news-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #news-container p {
+    margin-bottom: 10px;
+  }
+  
+  #news-container a {
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #news-container p:hover {
+    color: #b0aaaa;
+  }
+  
+  #news-container .video-container:hover {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  }
