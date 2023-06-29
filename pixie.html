@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroVerse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/load.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/photos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #pixi-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        header {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./images/saturn.png" style="width: 65px;height: 40px;margin-right: 25px;" alt="">
+                <h1>AstroVerse</h1>
+            </div>
+            <div class="menu">
+                <a href="index.html">Ballina</a>
+                <a href="photos.html">Fotografite</a>
+                <a href="news.html">Lajmet</a>
+                <a href="celestialobjects.html">Objektet Qiellore</a>
+                <a href="events.html">Ngjarjet</a>
+                <a href="#">Grafikat</a>
+                <a href="contact.html">Kontakt</a>
+            </div>
+            <button class="hamburger">
+                <span class="material-icons">menu</span>
+            </button>
+        </nav>
+        <div class="mobile-menu">
+            <a href="index.html">Ballina</a>
+            <a href="#">Fotografit</a>
+            <a href="news.html">Lajmet</a>
+            <a href="#">Objektet Qiellore</a>
+            <a href="events.html">Ngjarjet</a>
+            <a href="#">Grafikat</a>
+            <a href="contact.html">Kontakt</a>
+        </div>
+    </header>
+
+    <canvas id="pixi-canvas"></canvas>
+
+    <script src="https://pixijs.download/v5.3.3/pixi.min.js"></script>
+    <script>
+        // Initialize PixiJS
+        const app = new PIXI.Application({
+            view: document.getElementById('pixi-canvas'),
+            width: window.innerWidth,
+            height: window.innerHeight,
+            backgroundColor: 0x000000, // Background color (black in this case)
+        });
+
+        // Add the PixiJS canvas to the HTML page
+        document.body.appendChild(app.view);
+
+        const planets = [
+            { name: "Mercury", radius: 0.1, image: "https://res.cloudinary.com/dhjesuaf4/image/upload/v1688073224/mercury_nqsygm.png" },
+            { name: "Mars", radius: 0.2, image: "https://res.cloudinary.com/dhjesuaf4/image/upload/v1688073585/mars_vpb1ux.png" },
+            { name: "Earth", radius: 0.25, image: "https://res.cloudinary.com/dhjesuaf4/image/upload/v1688073665/earth_wbrsn6.webp" },
+            { name: "Jupiter", radius: 1, image: "https://res.cloudinary.com/dhjesuaf4/image/upload/v1688073962/jupiter_kpyfac.png" },
+            { name: "Saturn", radius: 0.9, image: "https://res.cloudinary.com/dhjesuaf4/image/upload/v1688078021/saturn_eifbsp.webp" },
+            { name: "Uranus", radius: 0.6, image: "https://res.cloudinary.com/dhjesuaf4/image/upload/v1688073604/uranus_b5n08b.png" },
+            { name: "Neptune", radius: 0.55, image: "https://res.cloudinary.com/dhjesuaf4/image/upload/v1688073624/neptune_lvr87y.png" },
+            // Add more planets here
+        ];
+
+        const planetSprites = [];
+        const distance = 120; // Fixed distance between planets
+        const speed = 1; // Movement speed
+
+        // Generate planets and add them to the stage
+        for (let i = 0; i < planets.length; i++) {
+            const planet = planets[i];
+
+            const planetSprite = PIXI.Sprite.from(planet.image);
+            planetSprite.anchor.set(0.5);
+
+            // Calculate the aspect ratio of the original image
+            const aspectRatio = planetSprite.width / planetSprite.height;
+
+            // Calculate the desired width and height based on the radius and aspect ratio
+            const width = planet.radius * 200;
+            const height = width / aspectRatio;
+
+            planetSprite.width = width;
+            planetSprite.height = height;
+            planetSprite.x = app.screen.width / 2;
+            planetSprite.y = -distance * (i + 1);
+            app.stage.addChild(planetSprite);
+            planetSprites.push(planetSprite);
+
+            const orbit = new PIXI.Graphics();
+            orbit.lineStyle(1, 0x888888);
+            orbit.drawCircle(0, 0, distance * (i + 1));
+            app.stage.addChildAt(orbit, 0);
+        }
+
+        // Animation loop
+        app.ticker.add(() => {
+            // Rotate and animate each planet
+            for (let i = 0; i < planetSprites.length; i++) {
+                const planetSprite = planetSprites[i];
+                planetSprite.y += speed * (i + 1);
+                if (planetSprite.y > app.screen.height + planetSprites[i].height) {
+                    planetSprite.y = -planetSprites[i].height;
+                }
+                planetSprite.rotation += 0.005; // Adjust the rotation speed as needed
+            }
+        });
+    </script>
+</body>
+</html>
