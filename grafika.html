@@ -7,7 +7,6 @@
 	<title>AstroVerse</title>
 	<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/icon.css">
     <link rel="stylesheet" href="css/load.css">
     <script
@@ -46,89 +45,18 @@
 
 		<div class="mobile-menu">
 			<a href="index.html">Ballina</a>
-			<a href="#">Fotografit</a>
+			<a href="photos.html">Fotografit</a>
 			<a href="news.html">Lajmet</a>
-			<a href="#">Objektet Qiellore</a>
+			<a href="celestialobjects.html">Objektet Qiellore</a>
       <a href="events.html">Ngjarjet</a>
-      <a href="#">Grafikat</a>
+      <a href="grafika.html">Grafikat</a>
       <a href="contact.html">Kontakt</a>
 		</div>
 	</header>
 
-    <div class="container">
-        <span class="big-circle"></span>
-        <div class="form">
-          <div class="contact-info">
-            <h3 class="title">Na Kontaktoni</h3>
-            <p class="text">
-                Astroverse është një website i dedikuar astronomisë dhe hapësirës. Ky platformë ofron një përmbajtje të pasur dhe të përditësuar për të gjithë dashamirët e shkencës së hapësirës.
-            </p>
-  
-            <div class="info">
-              <div class="information">
-                <i class="fas fa-address-card"></i>
-                <p class="pl">Adem Jashari, 
-                       Prishtinë, Kosovë</p>
-              </div>
-              <div class="information">
-                <i class="fas fa-envelope"></i>
-                <p class="pl">astroverse@gmail.com</p>
-              </div>
-              <div class="information">
-                <i class="fas fa-phone"></i>
-                <p class="pl">+38344612867</p>
-              </div>
-            </div>
-  
-            <div class="social-media">
-              <p>Na ndjekni ne :</p>
-              <div class="social-icons">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-  
-          <div class="contact-form">
-            <span class="circle one"></span>
-            <span class="circle two"></span>
-  
-            <form action="javascript:void(0)" autocomplete="off">
-              <h3 class="title">Contact us</h3>
-              <div class="input-container">
-                <input type="text" name="name" class="input name" placeholder="Emri Juaj" />
-                <span>Username</span>
-              </div>
-              <div class="input-container">
-                <input type="text" name="lname" class="input lname" placeholder="Mbiemri Juaj"/>
-                <span>Last Name</span>
-              </div>
-              <div class="input-container">
-                <input type="email" name="email" class="input email" placeholder="Email-i Juaj"/>
-                <span>Email</span>
-              </div>
-              <div class="input-container textarea">
-                <textarea name="subject" class="input subject" placeholder="Mesazhi Juaj"></textarea>
-                <span>Message</span>
-              </div>
-              <input type="submit" value="Send" class="btn disabled" />
-
-              <span class="error-msg" style="color: aliceblue; margin-top: 20px;"></span>
-              <div name="successMsg" class="successMsg" style="display: none; color: aliceblue; margin-top: 20px;">Mesazhi eshte derguar me sukses!</div>
-            </form>
-          </div>
-        </div>
-      </div>
+    <div id="chartContainer" style="height: 370px; width: 100%;">
+    
+    </div>
 
       <footer >
         <div class="rows">
@@ -150,11 +78,11 @@
                 <h3>Links <div class="bottoms_line"><span></span></div></h3>
                 <ul>
                     <li><a href="index.html">Ballina</a></li>
-                    <li><a href="">Fotografit</a></li>
+                    <li><a href="photos.html">Fotografit</a></li>
                     <li><a href="news.html">Lajmet</a></li>
-                    <li><a href="">Objektet Qiellore</a></li>
+                    <li><a href="celestialobjects.html">Objektet Qiellore</a></li>
                     <li><a href="events.html">Ngjarjet</a></li>
-                    <li><a href="">Grafikat</a></li>
+                    <li><a href="grafika.html">Grafikat</a></li>
                     <li><a href="contact.html">Kontakt</a></li>
                 </ul>
             </div>
@@ -185,8 +113,34 @@
         <p class="copyright">AstroVerse Ⓒ 2023 - Te Gjitha Te Drejtat e Rezervuar</p>
      </footer>
 
+     <script>
+        window.onload = function() {
+        
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            title: {
+                text: "Materialet dhe substancat qe perbejen nje planet"
+            },
+            data: [{
+                type: "pie",
+                startAngle: 240,
+                yValueFormatString: "##0.00\"%\"",
+                indexLabel: "{label} {y}",
+                dataPoints: [
+                    {y: 40, label: "Terrestrial Planets (Rocky): Approximately"},
+                    {y: 10, label: "Gas Giants: Approximately"},
+                    {y: 5, label: "Ice Giants: Approximately"},
+                    {y: 45, label: "Unknown/Undetermined: Approximately"}
+                ]
+            }]
+        });
+        chart.render();
+        
+        }
+        </script>
+
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
     <script src="js/load.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/contact.js"></script>
 </body>
 </html>
