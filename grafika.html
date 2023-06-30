@@ -119,18 +119,18 @@
         var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
             title: {
-                text: "Materialet dhe substancat qe perbejen nje planet"
-            },
+                text: "Planetet me madhesi te madhe"
+            }, 
             data: [{
                 type: "pie",
                 startAngle: 240,
                 yValueFormatString: "##0.00\"%\"",
                 indexLabel: "{label} {y}",
                 dataPoints: [
-                    {y: 40, label: "Terrestrial Planets (Rocky): Approximately"},
-                    {y: 10, label: "Gas Giants: Approximately"},
-                    {y: 5, label: "Ice Giants: Approximately"},
-                    {y: 45, label: "Unknown/Undetermined: Approximately"}
+                    {y: 5, label: "Toka"},
+                    {y: 10, label: "Saturn"},
+                    {y: 15, label: "Jupiter"},
+                    {y: 70, label: "Dielli"}
                 ]
             }]
         });
